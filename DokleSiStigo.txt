@@ -1,0 +1,39 @@
+2.3.7. System1_ ExtractClientInformation.xaml
+
+stavka 5b) - Value – Create a new String type variable called ClientInformation
+
+- good way to substring a string:
+  a. Out_ClientID = ClientInformation.Substring(ClientInformation.IndexOf("Client 
+ID: ") + "Client ID: ".Length).Split(Environment.NewLine.ToCharArray)(0) ------> ClientInformation.IndexOf("Client 
+ID: ") returns index of first c!!!, but "Client ID: ".Length translates to the index of : sign !!!***
+b. Out_ClientName = 
+ClientInformation.Substring(ClientInformation.IndexOf("Client Name: ") + 
+"Client Name: ".Length).Split(Environment.NewLine.ToCharArray)(0)
+c. Out_ClientCountry = 
+ClientInformation.Substring(ClientInformation.IndexOf("Client Country: 
+")+"Client Country: ".Length).Split(Environment.NewLine.ToCharArray)(0);
+ 
+- if string is in a following format: 
+
+  Client ID: XX97615
+  Client Name: Elidia Gaulke
+  Client Country: France
+
+------------------------------------------------------------------------------------------------------------------------
+
+- in a case of a success and bussiness exceptions: -> RetryNumber and ConsecutiveSystemExceptions counter is reset to  0; in a case of system exception -> ConsecutiveSystemException counter is incremented;
+
+-----------------------------------------------------------------------------------------
+
+- 5.1. Edit GetTransactionData.xaml workflow - point 8)
+  
+
+
+
+
+
+
+
+
+
+
